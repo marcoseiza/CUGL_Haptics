@@ -1,0 +1,123 @@
+{
+	"textures": {
+		"button": {
+			"file":     "textures/button.png",
+			"minfilter": "nearest",
+			"magfilter": "nearest",
+			"wrapS":    "clamp",
+			"wrapT":    "clamp"
+		},
+    "button-outline": {
+			"file":     "textures/button-outline.png",
+			"minfilter": "nearest",
+			"magfilter": "nearest",
+			"wrapS":    "clamp",
+			"wrapT":    "clamp"
+		},
+    "button-small": {
+			"file":     "textures/button-small.png",
+			"minfilter": "nearest",
+			"magfilter": "nearest",
+			"wrapS":    "clamp",
+			"wrapT":    "clamp"
+		},
+    "button-small-outline": {
+			"file":     "textures/button-small-outline.png",
+			"minfilter": "nearest",
+			"magfilter": "nearest",
+			"wrapS":    "clamp",
+			"wrapT":    "clamp"
+		},
+    "play": {
+      "file":     "textures/play.png",
+			"minfilter": "nearest",
+			"magfilter": "nearest",
+			"wrapS":    "clamp",
+			"wrapT":    "clamp"
+    },
+    "plus": {
+      "file":     "textures/plus.png",
+			"minfilter": "nearest",
+			"magfilter": "nearest",
+			"wrapS":    "clamp",
+			"wrapT":    "clamp"
+    },
+    "minus": {
+      "file":     "textures/minus.png",
+			"minfilter": "nearest",
+			"magfilter": "nearest",
+			"wrapS":    "clamp",
+			"wrapT":    "clamp"
+    }
+	},
+  "fonts": {
+    "pixelmix": {
+      "file": "fonts/pixelmix.ttf",
+      "size": 50
+    }
+  },
+  "widgets": {
+    "parameter": "json/parameter.json",
+    "play": "json/play.json"
+  },
+  "scene2s": {
+    "main": {
+      "type": "Node",
+      "format": {
+        "type": "Anchored"
+      },
+      "children": {
+        "play-transient": {
+          "type": "Widget",
+          "data": {
+            "key": "play",
+            "variables": {
+              "prompt": "PLAY TRANSIENT",
+              "x_offset": 10
+            }
+          }
+        },
+        "play-continuous": {
+          "type": "Widget",
+          "data": {
+            "key": "play",
+            "variables": {
+              "prompt": "PLAY CONTINUOUS",
+              "x_offset": 133
+            }
+          }
+        },
+        "intensity": {
+          "type": "Widget",
+          "data": {
+            "key": "parameter",
+            "variables": {
+              "name": "INTENSITY",
+              "x_offset": 10
+            }
+          }
+        },
+        "sharpness": {
+          "type": "Widget",
+          "data": {
+            "key": "parameter",
+            "variables": {
+              "name": "SHARPNESS",
+              "x_offset": 92
+            }
+          }
+        },
+        "duration": {
+          "type": "Widget",
+          "data": {
+            "key": "parameter",
+            "variables": {
+              "name": "DURATION",
+              "x_offset": 174
+            }
+          }
+        }
+      }
+    } 
+  }
+}

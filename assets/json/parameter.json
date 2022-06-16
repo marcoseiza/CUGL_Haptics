@@ -1,0 +1,159 @@
+{
+  "variables": {
+    "name": ["children", "name", "data", "text"],
+    "x_offset": ["layout", "x_offset"]
+  },
+  "contents": {
+    "type": "Node",
+    "format": {
+      "type": "Anchored"
+    },
+    "data": {
+      "anchor": [0, 1],
+      "size": [72, 41]
+    },
+    "layout": {
+      "x_anchor": "left",
+      "y_anchor": "top",
+      "x_offset": 10,
+      "y_offset": -70,
+      "absolute": true
+    },
+    "children": {
+      "patch": {
+        "type": "NinePatch",
+        "data": {
+          "texture": "button",
+          "interior": [6, 6, 20, 20],
+          "color": [85, 85, 118, 255]
+
+        },
+        "layout": {
+          "x_anchor": "fill",
+          "y_anchor": "fill"
+        }
+      },
+      "name": {
+        "type": "Label",
+        "data": {
+          "font": "pixelmix",
+          "text": "INTENSITY",
+          "foreground": [255, 255, 255, 255],
+          "anchor": [0.5, 1],
+          "halign": "center",
+          "valign": "middle",
+          "scale": 0.15
+        },
+        "layout": {
+          "x_anchor": "center",
+          "y_anchor": "top",
+          "y_offset": -5,
+          "absolute": true
+        }
+      },
+      "value": {
+        "type": "Label",
+        "data": {
+          "font": "pixelmix",
+          "text": "10.1",
+          "foreground": [255, 255, 255, 255],
+          "anchor": [0.5, 0.5],
+          "halign": "center",
+          "valign": "middle",
+          "scale": 0.15
+        },
+        "layout": {
+          "x_anchor": "center",
+          "y_anchor": "bottom",
+          "y_offset": 15,
+          "absolute": true
+        }
+      },
+      "increase": {
+        "type": "Button",
+        "format": {
+          "type": "Anchored"
+        },
+        "data": {
+          "upnode": "up",
+          "anchor": [1, 0],
+          "size": [18,18]
+        },
+        "layout": {
+          "x_anchor": "right",
+          "y_anchor": "bottom",
+          "x_offset": -5,
+          "y_offset": 5,
+          "absolute": true
+        },
+        "children": {
+          "up": {
+            "type": "NinePatch",
+            "data": {
+              "texture": "button-small",
+              "interior": [4, 4, 24, 24]
+            },
+            "layout": {
+              "x_anchor": "fill",
+              "y_anchor": "fill"
+            }
+          },
+          "label": {
+            "type": "Image",
+            "data": {
+              "texture": "plus",
+              "anchor": [0.5, 0.5],
+              "color": [85, 85, 118, 255]
+            },
+            "layout": {
+              "x_anchor": "center",
+              "y_anchor": "middle"
+            }
+          }
+        }
+      },
+      "decrease": {
+        "type": "Button",
+        "format": {
+          "type": "Anchored"
+        },
+        "data": {
+          "upnode": "up",
+          "anchor": [0, 0],
+          "size": [18,18]
+        },
+        "layout": {
+          "x_anchor": "left",
+          "y_anchor": "bottom",
+          "x_offset": 5,
+          "y_offset": 5,
+          "absolute": true
+        },
+        "children": {
+          "up": {
+            "type": "NinePatch",
+            "data": {
+              "texture": "button-small-outline",
+              "interior": [4, 4, 24, 24]
+            },
+            "layout": {
+              "x_anchor": "fill",
+              "y_anchor": "fill"
+            }
+          },
+          "label": {
+            "type": "Image",
+            "data": {
+              "texture": "minus",
+              "anchor": [0.5, 0.5]
+            },
+            "layout": {
+              "x_anchor": "center",
+              "y_anchor": "middle"
+            }
+          }
+        }
+      }
+    }
+  }
+}

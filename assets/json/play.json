@@ -1,0 +1,81 @@
+{
+  "variables": {
+    "x_offset": ["layout", "x_offset"],
+    "prompt": ["children", "label", "data", "text"]
+  },
+  "contents": {
+    "type": "Button",
+    "format": {
+      "type": "Anchored"
+    },
+    "data": {
+      "upnode": "up",
+      "anchor": [0, 1],
+      "size": [113,50]
+    },
+    "layout": {
+      "x_anchor": "left",
+      "y_anchor": "top",
+      "x_offset": 10,
+      "y_offset": -10,
+      "absolute": true
+    },
+    "children": {
+      "up": {
+        "type": "Node",
+        "format": {
+          "type": "Anchored"
+        },
+        "layout": {
+          "x_anchor": "fill",
+          "y_anchor": "fill"
+        },
+        "children": {
+          "patch": {
+            "type": "NinePatch",
+            "data": {
+              "texture": "button",
+              "interior": [6, 6, 20, 20],
+              "color": [85, 85, 118, 255]
+            },
+            "layout": {
+              "x_anchor": "fill",
+              "y_anchor": "fill"
+            }
+          },
+          "play": {
+            "type": "Image",
+            "data": {
+              "texture": "play",
+              "anchor": [0.5, 0]
+            },
+            "layout": {
+              "x_anchor": "center",
+              "y_anchor": "middle",
+              "y_offset": -4,
+              "absolute": true
+            }
+          },
+          "label": {
+            "type": "Label",
+            "data": {
+              "font": "pixelmix",
+              "text": "PLAY TRANSIENT",
+              "foreground": [255, 255, 255, 255],
+              "anchor": [0.5, 1.0],
+              "halign": "center",
+              "valign": "middle",
+              "scale": 0.15
+            },
+            "layout": {
+              "x_anchor": "center",
+              "y_anchor": "middle",
+              "y_offset": -10,
+              "absolute": true
+            }
+          }
+        }
+      }
+    }
+  }
+}
