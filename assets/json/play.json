@@ -1,7 +1,7 @@
 {
   "variables": {
     "x_offset": ["layout", "x_offset"],
-    "prompt": ["children", "label", "data", "text"]
+    "prompt": ["children", "up", "children", "label", "data", "text"]
   },
   "contents": {
     "type": "Button",

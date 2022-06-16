@@ -1,5 +1,14 @@
-# Cornell University Game Library (CUGL)
+# A Haptics Experiment using Cornell University Game Library (CUGL)
 
-This template provides a base for you to build off of.  You should add all of your files to sources and assets, as appropriate.  This will allow access to the Apple, Android, and Windows IDEs.
+Currently only works on iPhone using Core Haptics.
+Might break on Android/Windows
 
-You will need to make changes to the project to give it a different name and package identifier (to prevent your application from clashing with others).  See the course web page for instructions  
+Important Files
+- `Haptics.cpp`, shows usage. lines 176 and 184 are important.
+- `cugl/include/cugl/haptics/CUHaptics.h`
+- `cugl/lib/haptics/CUHaptics.cpp`
+- `cugl/lib/haptics/platform/CUHaptics-impl.h`, Bridge for platform specific haptics functionality.
+- `cugl/lib/haptics/platform/CUHaptics-iOS.mm`, Objective-c implementation on iOS using CoreHaptics.
+
+TODO
+- SDL Haptics
