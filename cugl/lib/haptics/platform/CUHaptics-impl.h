@@ -108,9 +108,10 @@ bool HapticsPlayTransient(float intensity, float sharpness);
  * @param intensity The strength of the haptic pattern, between [0.0f, 1.0f]
  * @param sharpness The frequency of the haptic pattern, between [0.0f, 1.0f]
  * @param duration The length of the haptic pattern, must be greater than 0.0f
+ * @param force Wether to force any playing continuous haptics event out.
  * @return If the haptic event successfully played.
  */
-bool HapticsPlayContinuous(float intensity, float sharpness, float duration);
+bool HapticsPlayContinuous(float intensity, float sharpness, float duration, bool force);
   
 /**
  * PLATFORM SPECIFIC

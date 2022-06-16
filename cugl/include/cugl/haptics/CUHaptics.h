@@ -168,9 +168,10 @@ public:
    * @param intensity The strength of the haptic pattern, between [0.0f, 1.0f]
    * @param sharpness The frequency of the haptic pattern, between [0.0f, 1.0f]
    * @param duration The length of the haptic pattern, must be greater than 0.0f
+   * @param foce Wether to stop all currently playing continuous haptic events.
    * @return If the haptic event successfully played.
    */
-  bool playContinuous(float intensity, float sharpness, float duration);
+  bool playContinuous(float intensity, float sharpness, float duration, bool force = false);
   
   /**
    * Update a running Continuous haptic pattern. Will only work on iOS not 

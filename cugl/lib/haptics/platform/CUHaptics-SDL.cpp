@@ -97,7 +97,7 @@ bool cugl::impl::HapticsPlayTransient(float intensity, float sharpness) { return
  * @param duration The length of the haptic pattern, must be greater than 0.0f
  * @return If the haptic event successfully played.
  */
-bool cugl::impl::HapticsPlayContinuous(float intensity, float sharpness, float duration) { return false; }
+bool cugl::impl::HapticsPlayContinuous(float intensity, float sharpness, float duration, bool force) { return false; }
   
 /**
  * Update a running Continuous haptic pattern. Will only work on iOS not 

@@ -277,9 +277,10 @@ bool cugl::impl::HapticsPlayTransient(float intensity, float sharpness) {
  * @param intensity The strength of the haptic pattern, between [0.0f, 1.0f]
  * @param sharpness The frequency of the haptic pattern, between [0.0f, 1.0f]
  * @param duration The length of the haptic pattern, must be greater than 0.0f
+ * @param force Wether to force any playing continuous haptics event out.
  * @return If the haptic event successfully played.
  */
-bool cugl::impl::HapticsPlayContinuous(float intensity, float sharpness, float duration) {
+bool cugl::impl::HapticsPlayContinuous(float intensity, float sharpness, float duration, bool force) {
     if (!_isHapticsSupported || _engine == NULL) {
         CULogError("[CUHaptics-iOS] Play Continuous aborted. Haptics is not supported or engine is not initialized.");
         return false;
@@ -288,6 +289,11 @@ bool cugl::impl::HapticsPlayContinuous(float intensity, float sharpness, float d
     if (intensity < 0.0f || intensity > 1.0f) return false;
     if (sharpness < 0.0f || sharpness > 1.0f) return false;
     if (duration <= 0.0f) return false;
+    
+    if (force) {
+        NSError* error = nil;
+        [_continuousPlayer stopAtTime:0 error:&error];
+    }
     
     startEngine();
 

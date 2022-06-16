@@ -58,7 +58,7 @@ bool cugl::impl::HapticsDispose() { return true; }
 
 bool cugl::impl::HapticsPlayTransient(float intensity, float sharpness) { return false; }
   
-bool cugl::impl::HapticsPlayContinuous(float intensity, float sharpness, float duration) { return false; }
+bool cugl::impl::HapticsPlayContinuous(float intensity, float sharpness, float duration, bool force) { return false; }
   
 bool cugl::impl::HapticsUpdateContinuous(float intensity, float sharpness) { return false; }
 

@@ -163,13 +163,14 @@ bool Haptics::playTransient(float intensity, float sharpness) {
  * @param intensity The strength of the haptic pattern, between [0.0f, 1.0f]
  * @param sharpness The frequency of the haptic pattern, between [0.0f, 1.0f]
  * @param duration The length of the haptic pattern, must be greater than 0.0f
+ * @param foce Wether to stop all currently playing continuous haptic events.
  * @return If the haptic event successfully played.
  */
-bool Haptics::playContinuous(float intensity, float sharpness, float duration) {
+bool Haptics::playContinuous(float intensity, float sharpness, float duration, bool force) {
     if (!HapticsIsSupported()) {
         CULogError("Play continuous aborted. Haptics is not supported on this device.");
     }
-    return HapticsPlayContinuous(intensity, sharpness, duration);
+    return HapticsPlayContinuous(intensity, sharpness, duration, force);
 }
 
   /**
